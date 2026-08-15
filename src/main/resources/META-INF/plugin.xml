@@ -1,0 +1,39 @@
+<idea-plugin>
+    <id>dev.bruno0416.vscodekeymap</id>
+    <name>VS Code Complete Keymap</name>
+    <vendor>Bruno0416</vendor>
+    <category>Keymap</category>
+
+    <description><![CDATA[
+        A VS Code-first keymap for IntelliJ-based IDEs. It maps VS Code keyboard workflows
+        to equivalent IntelliJ actions and omits commands that do not have a meaningful equivalent.
+    ]]></description>
+
+    <depends>com.intellij.modules.lang</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <bundledKeymap file="VS Code Complete.xml"/>
+        <bundledKeymap file="VS Code Complete (Windows).xml"/>
+        <bundledKeymap file="VS Code Complete (macOS).xml"/>
+        <applicationService serviceImplementation="dev.bruno0416.vscodekeymap.keymap.VsCodeShortcutDispatcher"/>
+        <postStartupActivity implementation="dev.bruno0416.vscodekeymap.startup.ShortcutStartupActivity"/>
+    </extensions>
+
+    <actions>
+        <action
+            id="dev.bruno0416.vscodekeymap.OpenKeymapSettings"
+            class="dev.bruno0416.vscodekeymap.actions.OpenKeymapSettingsAction"
+            text="Open Keyboard Shortcuts"
+            description="Open the IntelliJ Keymap settings page"/>
+        <action
+            id="dev.bruno0416.vscodekeymap.ToggleTerminal"
+            class="dev.bruno0416.vscodekeymap.actions.ToggleTerminalAction"
+            text="Toggle Terminal"
+            description="Show, focus, or hide the Terminal with VS Code-like panel behavior"/>
+        <action
+            id="dev.bruno0416.vscodekeymap.HideTerminal"
+            class="dev.bruno0416.vscodekeymap.actions.HideTerminalAction"
+            text="Hide Terminal"
+            description="Hide the Terminal tool window when it is visible"/>
+    </actions>
+</idea-plugin>

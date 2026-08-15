@@ -1,0 +1,23 @@
+{
+  "linux": [
+    {
+      "action": "dev.bruno0416.vscodekeymap.HideTerminal",
+      "key": "ctrl+shift+w",
+      "note": "Hide Terminal when visible."
+    }
+  ],
+  "windows": [
+    {
+      "action": "dev.bruno0416.vscodekeymap.HideTerminal",
+      "key": "ctrl+shift+w",
+      "note": "Hide Terminal when visible."
+    }
+  ],
+  "macos": [
+    {
+      "action": "dev.bruno0416.vscodekeymap.HideTerminal",
+      "key": "cmd+shift+w",
+      "note": "Hide Terminal when visible."
+    }
+  ]
+}

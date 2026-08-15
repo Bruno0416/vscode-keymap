@@ -1,0 +1,334 @@
+{
+  "actions.find": {
+    "status": "direct",
+    "intellij_action": "Find"
+  },
+  "editor.action.selectAll": {
+    "status": "direct",
+    "intellij_action": "$SelectAll"
+  },
+  "undo": {
+    "status": "direct",
+    "intellij_action": "$Undo"
+  },
+  "redo": {
+    "status": "direct",
+    "intellij_action": "$Redo"
+  },
+  "editor.action.startFindReplaceAction": {
+    "status": "equivalent",
+    "intellij_action": "Replace"
+  },
+  "editor.action.addSelectionToNextFindMatch": {
+    "status": "equivalent",
+    "intellij_action": "SelectNextOccurrence"
+  },
+  "editor.action.changeAll": {
+    "status": "equivalent",
+    "intellij_action": "SelectAllOccurrences"
+  },
+  "editor.action.commentLine": {
+    "status": "equivalent",
+    "intellij_action": "CommentByLineComment"
+  },
+  "editor.action.addCommentLine": {
+    "status": "equivalent",
+    "intellij_action": "CommentByLineComment"
+  },
+  "editor.action.removeCommentLine": {
+    "status": "equivalent",
+    "intellij_action": "CommentByLineComment"
+  },
+  "editor.action.blockComment": {
+    "status": "equivalent",
+    "intellij_action": "CommentByBlockComment"
+  },
+  "editor.action.formatDocument": {
+    "status": "equivalent",
+    "intellij_action": "ReformatCode"
+  },
+  "editor.action.formatSelection": {
+    "status": "equivalent",
+    "intellij_action": "ReformatCode"
+  },
+  "editor.action.organizeImports": {
+    "status": "equivalent",
+    "intellij_action": "OptimizeImports"
+  },
+  "editor.action.deleteLines": {
+    "status": "equivalent",
+    "intellij_action": "EditorDeleteLine"
+  },
+  "editor.action.moveLinesDownAction": {
+    "status": "equivalent",
+    "intellij_action": "MoveLineDown"
+  },
+  "editor.action.moveLinesUpAction": {
+    "status": "equivalent",
+    "intellij_action": "MoveLineUp"
+  },
+  "editor.action.insertCursorAbove": {
+    "status": "equivalent",
+    "intellij_action": "EditorCloneCaretAbove"
+  },
+  "editor.action.insertCursorBelow": {
+    "status": "equivalent",
+    "intellij_action": "EditorCloneCaretBelow"
+  },
+  "editor.action.insertLineAfter": {
+    "status": "equivalent",
+    "intellij_action": "EditorStartNewLine"
+  },
+  "editor.action.insertLineBefore": {
+    "status": "equivalent",
+    "intellij_action": "EditorStartNewLineBefore"
+  },
+  "editor.action.jumpToBracket": {
+    "status": "equivalent",
+    "intellij_action": "EditorMatchBrace"
+  },
+  "editor.action.nextMatchFindAction": {
+    "status": "equivalent",
+    "intellij_action": "FindNext"
+  },
+  "editor.action.previousMatchFindAction": {
+    "status": "equivalent",
+    "intellij_action": "FindPrevious"
+  },
+  "editor.action.peekDefinition": {
+    "status": "equivalent",
+    "intellij_action": "QuickImplementations"
+  },
+  "editor.action.revealDefinition": {
+    "status": "equivalent",
+    "intellij_action": "GotoDeclaration"
+  },
+  "editor.action.goToImplementation": {
+    "status": "equivalent",
+    "intellij_action": "GotoImplementation"
+  },
+  "editor.action.goToReferences": {
+    "status": "equivalent",
+    "intellij_action": "ShowUsages"
+  },
+  "editor.action.rename": {
+    "status": "direct",
+    "intellij_action": "RenameElement"
+  },
+  "editor.action.quickFix": {
+    "status": "equivalent",
+    "intellij_action": "ShowIntentionActions"
+  },
+  "editor.fold": {
+    "status": "equivalent",
+    "intellij_action": "CollapseRegion"
+  },
+  "editor.unfold": {
+    "status": "equivalent",
+    "intellij_action": "ExpandRegion"
+  },
+  "editor.foldAll": {
+    "status": "equivalent",
+    "intellij_action": "CollapseAllRegions"
+  },
+  "editor.unfoldAll": {
+    "status": "equivalent",
+    "intellij_action": "ExpandAllRegions"
+  },
+  "editor.foldLevel1": {
+    "status": "equivalent",
+    "intellij_action": "CollapseAllRegions"
+  },
+  "editor.foldLevel2": {
+    "status": "equivalent",
+    "intellij_action": "CollapseAllRegions"
+  },
+  "editor.foldLevel3": {
+    "status": "equivalent",
+    "intellij_action": "CollapseAllRegions"
+  },
+  "editor.foldLevel4": {
+    "status": "equivalent",
+    "intellij_action": "CollapseAllRegions"
+  },
+  "editor.foldLevel5": {
+    "status": "equivalent",
+    "intellij_action": "CollapseAllRegions"
+  },
+  "editor.foldLevel6": {
+    "status": "equivalent",
+    "intellij_action": "CollapseAllRegions"
+  },
+  "editor.foldLevel7": {
+    "status": "equivalent",
+    "intellij_action": "CollapseAllRegions"
+  },
+  "workbench.action.quickOpen": {
+    "status": "equivalent",
+    "intellij_action": "GotoFile"
+  },
+  "workbench.action.showCommands": {
+    "status": "equivalent",
+    "intellij_action": "GotoAction"
+  },
+  "workbench.action.findInFiles": {
+    "status": "equivalent",
+    "intellij_action": "FindInPath"
+  },
+  "workbench.action.replaceInFiles": {
+    "status": "equivalent",
+    "intellij_action": "ReplaceInPath"
+  },
+  "workbench.view.explorer": {
+    "status": "equivalent",
+    "intellij_action": "ActivateProjectToolWindow"
+  },
+  "workbench.view.scm": {
+    "status": "equivalent",
+    "intellij_action": "ActivateVersionControlToolWindow"
+  },
+  "workbench.action.toggleSidebarVisibility": {
+    "status": "equivalent",
+    "intellij_action": "ActivateProjectToolWindow",
+    "note": "Project tool window is IntelliJ's Explorer/sidebar equivalent."
+  },
+  "workbench.action.togglePanel": {
+    "status": "adapter",
+    "intellij_action": "dev.bruno0416.vscodekeymap.ToggleTerminal",
+    "note": "VS Code's bottom panel is represented by Terminal in IntelliJ; the adapter shows it when hidden and hides it when visible."
+  },
+  "workbench.action.terminal.toggleTerminal": {
+    "status": "adapter",
+    "intellij_action": "dev.bruno0416.vscodekeymap.ToggleTerminal",
+    "note": "Uses the terminal adapter so the shortcut works even when no bottom tool window is currently visible."
+  },
+  "workbench.action.terminal.new": {
+    "status": "equivalent",
+    "intellij_action": "Terminal.NewTab",
+    "note": "IntelliJ 2025.2 Terminal.NewTab creates a new terminal tab, matching VS Code Ctrl+Shift+`."
+  },
+  "workbench.action.openGlobalKeybindings": {
+    "status": "adapter",
+    "intellij_action": "dev.bruno0416.vscodekeymap.OpenKeymapSettings"
+  },
+  "workbench.action.openSettings": {
+    "status": "equivalent",
+    "intellij_action": "ShowSettings"
+  },
+  "workbench.action.splitEditor": {
+    "status": "equivalent",
+    "intellij_action": "SplitVertically"
+  },
+  "workbench.action.focusLeftGroup": {
+    "status": "equivalent",
+    "intellij_action": "PrevSplitter"
+  },
+  "workbench.action.focusRightGroup": {
+    "status": "equivalent",
+    "intellij_action": "NextSplitter"
+  },
+  "workbench.action.previousEditor": {
+    "status": "equivalent",
+    "intellij_action": "PreviousTab"
+  },
+  "workbench.action.nextEditor": {
+    "status": "equivalent",
+    "intellij_action": "NextTab"
+  },
+  "workbench.action.reopenClosedEditor": {
+    "status": "equivalent",
+    "intellij_action": "ReopenClosedTab"
+  },
+  "workbench.action.closeActiveEditor": {
+    "status": "equivalent",
+    "intellij_action": "CloseContent"
+  },
+  "workbench.action.closeAllEditors": {
+    "status": "equivalent",
+    "intellij_action": "CloseAllEditors"
+  },
+  "workbench.action.files.openFile": {
+    "status": "equivalent",
+    "intellij_action": "OpenFile"
+  },
+  "workbench.action.files.newUntitledFile": {
+    "status": "equivalent",
+    "intellij_action": "FileChooser.NewFile"
+  },
+  "workbench.action.files.save": {
+    "status": "equivalent",
+    "intellij_action": "SaveDocument"
+  },
+  "workbench.action.files.saveAll": {
+    "status": "equivalent",
+    "intellij_action": "SaveAll"
+  },
+  "workbench.action.gotoLine": {
+    "status": "equivalent",
+    "intellij_action": "GotoLine"
+  },
+  "workbench.action.gotoSymbol": {
+    "status": "equivalent",
+    "intellij_action": "FileStructurePopup"
+  },
+  "workbench.action.showAllSymbols": {
+    "status": "equivalent",
+    "intellij_action": "GotoSymbol"
+  },
+  "workbench.action.navigateBack": {
+    "status": "equivalent",
+    "intellij_action": "Back"
+  },
+  "workbench.action.navigateForward": {
+    "status": "equivalent",
+    "intellij_action": "Forward"
+  },
+  "workbench.action.debug.start": {
+    "status": "equivalent",
+    "intellij_action": "Debug"
+  },
+  "workbench.action.debug.continue": {
+    "status": "equivalent",
+    "intellij_action": "Resume"
+  },
+  "workbench.action.debug.run": {
+    "status": "equivalent",
+    "intellij_action": "Run"
+  },
+  "workbench.action.debug.stop": {
+    "status": "equivalent",
+    "intellij_action": "Stop"
+  },
+  "workbench.action.debug.restart": {
+    "status": "equivalent",
+    "intellij_action": "Rerun"
+  },
+  "editor.debug.action.toggleBreakpoint": {
+    "status": "equivalent",
+    "intellij_action": "ToggleLineBreakpoint"
+  },
+  "workbench.action.debug.stepOver": {
+    "status": "equivalent",
+    "intellij_action": "StepOver"
+  },
+  "workbench.action.debug.stepInto": {
+    "status": "equivalent",
+    "intellij_action": "StepInto"
+  },
+  "workbench.action.debug.stepOut": {
+    "status": "equivalent",
+    "intellij_action": "StepOut"
+  },
+  "editor.action.marker.nextInFiles": {
+    "status": "equivalent",
+    "intellij_action": "GotoNextError"
+  },
+  "editor.action.marker.prevInFiles": {
+    "status": "equivalent",
+    "intellij_action": "GotoPreviousError"
+  },
+  "editor.action.toggleWordWrap": {
+    "status": "equivalent",
+    "intellij_action": "EditorToggleUseSoftWraps"
+  }
+}

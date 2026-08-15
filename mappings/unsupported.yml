@@ -1,0 +1,11 @@
+# Initial unsupported/ignored command catalog.
+# This list will expand as the VS Code defaults are audited command-by-command.
+commands:
+  workbench.action.toggleAuxiliaryBar:
+    reason: No stable one-to-one IntelliJ concept in the initial release.
+  workbench.action.chat.open:
+    reason: VS Code-specific workbench/AI surface; intentionally outside the keymap scope.
+  workbench.action.toggleCenteredLayout:
+    reason: No direct IntelliJ equivalent selected yet.
+  workbench.action.navigateToLastEditLocation:
+    reason: Needs behavior review before mapping to JumpToLastChange.

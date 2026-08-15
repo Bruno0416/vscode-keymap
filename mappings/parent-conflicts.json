@@ -1,0 +1,19 @@
+{
+  "linux": [
+    "InsertLiveTemplate",
+    "EditorDuplicate",
+    "CompareTwoFiles",
+    "Diff.ShowDiff",
+    "Compare.SameVersion",
+    "SendEOF"
+  ],
+  "windows": [
+    "InsertLiveTemplate",
+    "EditorDuplicate",
+    "CompareTwoFiles",
+    "Diff.ShowDiff",
+    "Compare.SameVersion",
+    "SendEOF"
+  ],
+  "macos": []
+}

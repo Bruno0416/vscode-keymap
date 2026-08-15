@@ -1,0 +1,9 @@
+{
+  "source": "microsoft/vscode-docs",
+  "description": "Generated VS Code default keyboard shortcut snapshots published by Microsoft.",
+  "urls": {
+    "linux": "https://raw.githubusercontent.com/microsoft/vscode-docs/main/build/keybindings/doc.keybindings.linux.json",
+    "windows": "https://raw.githubusercontent.com/microsoft/vscode-docs/main/build/keybindings/doc.keybindings.win.json",
+    "macos": "https://raw.githubusercontent.com/microsoft/vscode-docs/main/build/keybindings/doc.keybindings.osx.json"
+  }
+}

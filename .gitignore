@@ -1,0 +1,20 @@
+.gradle/
+.intellijPlatform/
+.kotlin/
+.idea/
+build/
+out/
+bin/
+*.iml
+.DS_Store
+**/__pycache__/
+*.py[cod]
+
+# Optional local VS Code profile import
+sources/user/keybindings.local.json
+
+# Local migration / patch artifacts
+.refactor-backups/
+.patch-backups/
+.vscode-keymap-patch-backups/
+.github-finalize-backups/
