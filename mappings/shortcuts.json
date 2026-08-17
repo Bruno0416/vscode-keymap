@@ -4,6 +4,16 @@
       "action": "dev.bruno0416.vscodekeymap.HideTerminal",
       "key": "ctrl+shift+w",
       "note": "Hide Terminal when visible."
+    },
+    {
+      "action": "MoveLineUp",
+      "key": "alt+up",
+      "note": "Move the current line or selected lines up, matching VS Code."
+    },
+    {
+      "action": "MoveLineDown",
+      "key": "alt+down",
+      "note": "Move the current line or selected lines down, matching VS Code."
     }
   ],
   "windows": [
@@ -11,6 +21,16 @@
       "action": "dev.bruno0416.vscodekeymap.HideTerminal",
       "key": "ctrl+shift+w",
       "note": "Hide Terminal when visible."
+    },
+    {
+      "action": "MoveLineUp",
+      "key": "alt+up",
+      "note": "Move the current line or selected lines up, matching VS Code."
+    },
+    {
+      "action": "MoveLineDown",
+      "key": "alt+down",
+      "note": "Move the current line or selected lines down, matching VS Code."
     }
   ],
   "macos": [
@@ -18,6 +38,16 @@
       "action": "dev.bruno0416.vscodekeymap.HideTerminal",
       "key": "cmd+shift+w",
       "note": "Hide Terminal when visible."
+    },
+    {
+      "action": "MoveLineUp",
+      "key": "alt+up",
+      "note": "Move the current line or selected lines up, matching VS Code."
+    },
+    {
+      "action": "MoveLineDown",
+      "key": "alt+down",
+      "note": "Move the current line or selected lines down, matching VS Code."
     }
   ]
 }

@@ -2,6 +2,7 @@ package dev.bruno0416.vscodekeymap.keymap
 
 import com.intellij.ide.DataManager
 import com.intellij.openapi.Disposable
+import com.intellij.openapi.actionSystem.ActionManager
 import com.intellij.openapi.actionSystem.CommonDataKeys
 import com.intellij.openapi.keymap.Keymap
 import com.intellij.openapi.keymap.KeymapManager
@@ -15,11 +16,15 @@ import java.awt.event.KeyEvent
 import java.util.concurrent.atomic.AtomicBoolean
 
 /**
- * Handles VS Code terminal shortcuts that must win before the focused terminal consumes raw keys.
+ * Handles VS Code shortcuts that need deterministic behavior before a focused component consumes them.
  *
  * IntelliJ 2025.2's Reworked Terminal can turn Ctrl+J into a line-feed. A Ctrl+J sequence may
  * arrive as KEY_PRESSED with Ctrl followed by a KEY_TYPED line-feed whose modifier mask is empty.
  * We therefore remember the accepted press and consume its typed/released tail explicitly.
+ *
+ * Alt+Up/Down is also bridged while an editor has focus so VS Code's move-line workflow wins over
+ * contextual IntelliJ actions. The bridge delegates to IntelliJ's native MoveLineUp/MoveLineDown
+ * actions, preserving selection and editor undo semantics.
  */
 class VsCodeShortcutDispatcher : Disposable {
     private val installed = AtomicBoolean()
@@ -67,6 +72,11 @@ class VsCodeShortcutDispatcher : Disposable {
             return true
         }
 
+        if (isMoveLinePress(event) && moveLine(event)) {
+            event.consume()
+            return true
+        }
+
         if (isCloseTerminalPress(event, macosKeymap)) {
             val project = currentProject()?.takeUnless { it.isDisposed } ?: return false
             if (HideTerminalAction.isVisible(project)) {
@@ -89,6 +99,25 @@ class VsCodeShortcutDispatcher : Disposable {
             InputEvent.META_DOWN_MASK or InputEvent.SHIFT_DOWN_MASK or InputEvent.ALT_DOWN_MASK
         }
         return event.modifiersEx and required != 0 && event.modifiersEx and forbidden == 0
+    }
+
+    private fun isMoveLinePress(event: KeyEvent): Boolean {
+        if (event.keyCode != KeyEvent.VK_UP && event.keyCode != KeyEvent.VK_DOWN) return false
+        val required = InputEvent.ALT_DOWN_MASK
+        val forbidden = InputEvent.CTRL_DOWN_MASK or InputEvent.META_DOWN_MASK or InputEvent.SHIFT_DOWN_MASK
+        return event.modifiersEx and required != 0 && event.modifiersEx and forbidden == 0
+    }
+
+    private fun moveLine(event: KeyEvent): Boolean {
+        val focusOwner = KeyboardFocusManager.getCurrentKeyboardFocusManager().focusOwner ?: return false
+        val context = DataManager.getInstance().getDataContext(focusOwner)
+        if (CommonDataKeys.EDITOR.getData(context) == null) return false
+
+        val actionId = if (event.keyCode == KeyEvent.VK_UP) MOVE_LINE_UP else MOVE_LINE_DOWN
+        val actionManager = ActionManager.getInstance()
+        val action = actionManager.getAction(actionId) ?: return false
+        actionManager.tryToExecute(action, event, focusOwner, null, true)
+        return true
     }
 
     private fun isCloseTerminalPress(event: KeyEvent, macosKeymap: Boolean): Boolean {
@@ -127,5 +156,7 @@ class VsCodeShortcutDispatcher : Disposable {
 
     private companion object {
         const val KEYMAP_PREFIX = "VS Code Complete"
+        const val MOVE_LINE_UP = "MoveLineUp"
+        const val MOVE_LINE_DOWN = "MoveLineDown"
     }
 }

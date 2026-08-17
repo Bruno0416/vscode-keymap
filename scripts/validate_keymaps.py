@@ -18,6 +18,8 @@ REQUIRED = {
     ("GotoAction", "f1", ""),
     ("FindInPath", "ctrl shift f", ""),
     ("ReplaceInPath", "ctrl shift h", ""),
+    ("MoveLineUp", "alt up", ""),
+    ("MoveLineDown", "alt down", ""),
     ("dev.bruno0416.vscodekeymap.OpenKeymapSettings", "ctrl k", "ctrl s"),
 }
 CLEARED_PARENT_ACTIONS = {
@@ -78,5 +80,5 @@ if not required_actions.issubset(action_ids):
 
 print(
     f"Keymap validation passed: {len(seen)} Linux shortcuts; "
-    "Terminal toggle/new-tab/close workflow and Ctrl+D cleanup present"
+    "Terminal toggle/new-tab/close workflow, Ctrl+D cleanup, and Alt+Up/Down move-line workflow present"
 )
