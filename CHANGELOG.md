@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.6
+
+- Guarantee VS Code's `Alt+Up` / `Alt+Down` move-line workflow while an editor has focus.
+- Delegate the shortcut to IntelliJ's native `MoveLineUp` / `MoveLineDown` actions so selected lines move together and undo behavior remains native.
+- Keep the mapping as an explicit curated override on Linux, Windows, and macOS so future VS Code source refreshes cannot drop it.
+- Extend keymap validation to require the Linux `Alt+Up` / `Alt+Down` bindings.
+
 ## 0.2.5
 
 - Finalized the public namespace as `dev.bruno0416.vscodekeymap` before the first repository release.
