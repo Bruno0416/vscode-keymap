@@ -6,6 +6,10 @@
   <action id="Diff.ShowDiff" />
   <action id="Compare.SameVersion" />
   <action id="SendEOF" />
+  <action id="MethodDown" />
+  <action id="MethodUp" />
+  <action id="MoveStatementDown" />
+  <action id="MoveStatementUp" />
   <action id="$SelectAll">
     <keyboard-shortcut first-keystroke="ctrl a" />
   </action>

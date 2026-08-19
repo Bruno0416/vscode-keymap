@@ -1,5 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <keymap version="1" name="VS Code Complete (macOS)" parent="Mac OS X 10.5+">
+  <action id="MethodDown" />
+  <action id="MethodUp" />
+  <action id="MoveStatementDown" />
+  <action id="MoveStatementUp" />
   <action id="$SelectAll">
     <keyboard-shortcut first-keystroke="meta a" />
   </action>

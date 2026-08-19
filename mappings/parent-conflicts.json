@@ -5,7 +5,11 @@
     "CompareTwoFiles",
     "Diff.ShowDiff",
     "Compare.SameVersion",
-    "SendEOF"
+    "SendEOF",
+    "MethodDown",
+    "MethodUp",
+    "MoveStatementDown",
+    "MoveStatementUp"
   ],
   "windows": [
     "InsertLiveTemplate",
@@ -13,7 +17,16 @@
     "CompareTwoFiles",
     "Diff.ShowDiff",
     "Compare.SameVersion",
-    "SendEOF"
+    "SendEOF",
+    "MethodDown",
+    "MethodUp",
+    "MoveStatementDown",
+    "MoveStatementUp"
   ],
-  "macos": []
+  "macos": [
+    "MethodDown",
+    "MethodUp",
+    "MoveStatementDown",
+    "MoveStatementUp"
+  ]
 }
