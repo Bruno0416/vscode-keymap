@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.7
+
+- Fix inconsistent `Alt+Up` / `Alt+Down` behavior that could trigger structural navigation instead of moving text.
+- Clear inherited IntelliJ `MethodUp`, `MethodDown`, `MoveStatementUp`, and `MoveStatementDown` bindings before assigning the VS Code move-line shortcuts.
+- Keep `Alt+Up` / `Alt+Down` delegated to IntelliJ's native `MoveLineUp` / `MoveLineDown` actions for native selection and undo behavior.
+- Apply the conflict cleanup consistently to Linux, Windows, and macOS keymaps, matching the strategy used by JetBrains' VSCode Keymap.
+
 ## 0.2.6
 
 - Guarantee VS Code's `Alt+Up` / `Alt+Down` move-line workflow while an editor has focus.
